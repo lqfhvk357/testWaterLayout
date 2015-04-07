@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="5053" systemVersion="13E28" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" restorationIdentifier="shop" id="qVm-vc-Xd0" customClass="LCShopCell">
+            <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="7gQ-KY-WRK">
+                    <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                </imageView>
+                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R3M-vy-Lay">
+                    <rect key="frame" x="0.0" y="70" width="100" height="30"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30" id="Y7d-Cu-PEb"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="7gQ-KY-WRK" secondAttribute="trailing" id="4yy-tD-N4Y"/>
+                <constraint firstAttribute="bottom" secondItem="7gQ-KY-WRK" secondAttribute="bottom" id="e0x-od-VIW"/>
+                <constraint firstItem="R3M-vy-Lay" firstAttribute="leading" secondItem="qVm-vc-Xd0" secondAttribute="leading" id="eGn-Zh-6fc"/>
+                <constraint firstItem="7gQ-KY-WRK" firstAttribute="leading" secondItem="qVm-vc-Xd0" secondAttribute="leading" id="jwF-eK-APh"/>
+                <constraint firstAttribute="trailing" secondItem="R3M-vy-Lay" secondAttribute="trailing" id="p5u-3S-KuA"/>
+                <constraint firstAttribute="bottom" secondItem="R3M-vy-Lay" secondAttribute="bottom" id="rMk-1S-mfX"/>
+                <constraint firstItem="7gQ-KY-WRK" firstAttribute="top" secondItem="qVm-vc-Xd0" secondAttribute="top" id="tx6-px-7AK"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="imageView" destination="7gQ-KY-WRK" id="ljb-Hh-USt"/>
+                <outlet property="priceLabel" destination="R3M-vy-Lay" id="inV-7O-8un"/>
+            </connections>
+        </view>
+    </objects>
+</document>
