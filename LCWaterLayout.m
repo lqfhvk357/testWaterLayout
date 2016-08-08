@@ -47,7 +47,11 @@
 
 - (BOOL)shouldInvalidateLayoutForBoundsChange:(CGRect)newBounds
 {
-    return YES;
+    CGRect oldBounds = self.collectionView.bounds;
+    if (CGRectGetWidth(newBounds) != CGRectGetWidth(oldBounds)) {
+        return YES;
+    }
+    return NO;
 }
 
 - (void)prepareLayout
@@ -58,12 +62,13 @@
         self.colMaxYs[str]=@(self.sectionInset.top);
     }
     
-    NSInteger count=[self.collectionView numberOfItemsInSection:0];
     [self.layoutAttributes removeAllObjects];
+    NSInteger count=[self.collectionView numberOfItemsInSection:0];
     for (int i=0; i<count; i++) {
         UICollectionViewLayoutAttributes *attr=[self layoutAttributesForItemAtIndexPath:[NSIndexPath indexPathForItem:i inSection:0]];
         [self.layoutAttributes addObject:attr];
     }
+    
 }
 
 - (CGSize)collectionViewContentSize
@@ -81,7 +86,20 @@
 
 - (NSArray *)layoutAttributesForElementsInRect:(CGRect)rect
 {
-    return self.layoutAttributes;
+
+    CGRect visibleRect;
+    visibleRect.origin = self.collectionView.contentOffset;
+    visibleRect.size = self.collectionView.bounds.size;
+    
+    NSMutableArray *visibleArray=[NSMutableArray array];
+    for (UICollectionViewLayoutAttributes *attr in self.layoutAttributes) {
+        if (CGRectIntersectsRect(visibleRect, attr.frame)) {
+            [visibleArray addObject:attr];
+        }
+    }
+
+    NSLog(@"count:%ld-------visbleCount:%lu", (long)visibleArray.count, (unsigned long)self.layoutAttributes.count);
+    return visibleArray;
 }
 
 - (UICollectionViewLayoutAttributes *)layoutAttributesForItemAtIndexPath:(NSIndexPath *)indexPath
@@ -103,6 +121,16 @@
     
     UICollectionViewLayoutAttributes *attrs=[UICollectionViewLayoutAttributes layoutAttributesForCellWithIndexPath:indexPath];
     attrs.frame=CGRectMake(x, y, width, height);
+    return attrs;
+}
+
+- (UICollectionViewLayoutAttributes *)layoutAttributesForSupplementaryViewOfKind:(NSString *)elementKind atIndexPath:(NSIndexPath *)indexPath{
+    UICollectionViewLayoutAttributes *attrs=[UICollectionViewLayoutAttributes layoutAttributesForSupplementaryViewOfKind:@"" withIndexPath:indexPath];
+    return attrs;
+}
+
+- (UICollectionViewLayoutAttributes *)layoutAttributesForDecorationViewOfKind:(NSString *)elementKind atIndexPath:(NSIndexPath *)indexPath{
+    UICollectionViewLayoutAttributes *attrs=[UICollectionViewLayoutAttributes layoutAttributesForDecorationViewOfKind:@"" withIndexPath:indexPath];
     return attrs;
 }
 @end

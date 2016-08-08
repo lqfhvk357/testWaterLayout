@@ -61,6 +61,7 @@
 		0448384A1AB65B1E00C8CE98 /* LCShopCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 044838491AB65B1E00C8CE98 /* LCShopCell.m */; };
 		0448384C1AB65B4600C8CE98 /* LCShopCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0448384B1AB65B4600C8CE98 /* LCShopCell.xib */; };
 		0448384F1AB65F0100C8CE98 /* LCWaterLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 0448384E1AB65F0100C8CE98 /* LCWaterLayout.m */; };
+		383A43DE1D5838A90061A99B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 383A43DD1D5838A90061A99B /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -173,6 +174,7 @@
 		0448384B1AB65B4600C8CE98 /* LCShopCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = LCShopCell.xib; path = ../LCShopCell.xib; sourceTree = "<group>"; };
 		0448384D1AB65F0100C8CE98 /* LCWaterLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LCWaterLayout.h; path = ../LCWaterLayout.h; sourceTree = "<group>"; };
 		0448384E1AB65F0100C8CE98 /* LCWaterLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LCWaterLayout.m; path = ../LCWaterLayout.m; sourceTree = "<group>"; };
+		383A43DD1D5838A90061A99B /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -245,6 +247,7 @@
 				0448384B1AB65B4600C8CE98 /* LCShopCell.xib */,
 				0448384D1AB65F0100C8CE98 /* LCWaterLayout.h */,
 				0448384E1AB65F0100C8CE98 /* LCWaterLayout.m */,
+				383A43DD1D5838A90061A99B /* LaunchScreen.storyboard */,
 				044837B71AB642AE00C8CE98 /* Images.xcassets */,
 				044837A61AB642AD00C8CE98 /* Supporting Files */,
 			);
@@ -465,6 +468,7 @@
 				044837AA1AB642AD00C8CE98 /* InfoPlist.strings in Resources */,
 				044837D51AB6541E00C8CE98 /* 1.plist in Resources */,
 				044837E81AB656B900C8CE98 /* MJRefresh.bundle in Resources */,
+				383A43DE1D5838A90061A99B /* LaunchScreen.storyboard in Resources */,
 				0448384C1AB65B4600C8CE98 /* LCShopCell.xib in Resources */,
 				044837B31AB642AE00C8CE98 /* Main.storyboard in Resources */,
 			);
@@ -729,6 +733,7 @@
 				044837D01AB642AE00C8CE98 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		044837D11AB642AE00C8CE98 /* Build configuration list for PBXNativeTarget "testWaterLayoutTests" */ = {
 			isa = XCConfigurationList;
@@ -737,6 +742,7 @@
 				044837D31AB642AE00C8CE98 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
